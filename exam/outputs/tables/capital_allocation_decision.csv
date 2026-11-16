@@ -1,0 +1,11 @@
+ticker,company_name,country,sector,composite_score,benchmark_weight,final_portfolio_weight,recommendation
+THBEV,Thai Beverage PCL,Thailand,Consumer Staples,0.095,0.1,0.1075,Neutral (Hold Benchmark)
+CPALL,CP ALL PCL,Thailand,Consumer Staples,0.071,0.1,0.1075,Neutral (Hold Benchmark)
+SEMB,Sembcorp Industries Ltd,Singapore,Utilities,0.046,0.1,0.1075,Neutral (Hold Benchmark)
+URC,Universal Robina Corporation,Philippines,Consumer Staples,0.013,0.1,0.1075,Neutral (Hold Benchmark)
+INDF,PT Indofood CBP Sukses Makmur Tbk,Indonesia,Consumer Staples,-0.013,0.1,0.1075,Neutral (Hold Benchmark)
+WILM,Wilmar International Ltd,Singapore,Consumer Staples,-0.021,0.1,0.1075,Neutral (Hold Benchmark)
+GULF,Gulf Energy Development PCL,Thailand,Utilities,-0.039,0.1,0.1075,Neutral (Hold Benchmark)
+MER,Manila Electric Company (Meralco),Philippines,Utilities,-0.042,0.1,0.1075,Neutral (Hold Benchmark)
+PGAS,PT Perusahaan Gas Negara Tbk,Indonesia,Utilities,-0.138,0.1,0.07,Underweight (-3.0%)
+TNB,Tenaga Nasional Berhad,Malaysia,Utilities,-0.201,0.1,0.07,Underweight (-3.0%)

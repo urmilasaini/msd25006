@@ -1,0 +1,11 @@
+ticker,company_name,country,sector,revenue_musd,market_cap_musd,benchmark_weight,scope1_emissions_kt,scope2_emissions_kt,emis_intensity_tco2_per_musd
+SEMB,Sembcorp Industries Ltd,Singapore,Utilities,5820.0,7100.0,0.1,2200.0,590.0,479.4
+TNB,Tenaga Nasional Berhad,Malaysia,Utilities,11450.0,16200.0,0.1,6800.0,300.0,620.1
+MER,Manila Electric Company (Meralco),Philippines,Utilities,7840.0,8900.0,0.1,1650.0,190.0,234.7
+GULF,Gulf Energy Development PCL,Thailand,Utilities,3120.0,14500.0,0.1,1150.0,95.0,399.0
+PGAS,PT Perusahaan Gas Negara Tbk,Indonesia,Utilities,3650.0,2400.0,0.1,850.0,60.0,249.3
+CPALL,CP ALL PCL,Thailand,Consumer Staples,24800.0,15800.0,0.1,180.0,2180.0,95.2
+WILM,Wilmar International Ltd,Singapore,Consumer Staples,67100.0,14900.0,0.1,4800.0,16020.0,310.3
+THBEV,Thai Beverage PCL,Thailand,Consumer Staples,7950.0,9800.0,0.1,320.0,395.0,89.9
+URC,Universal Robina Corporation,Philippines,Consumer Staples,2850.0,4100.0,0.1,110.0,145.0,89.5
+INDF,PT Indofood CBP Sukses Makmur Tbk,Indonesia,Consumer Staples,4420.0,7200.0,0.1,160.0,210.0,83.7

@@ -1,0 +1,72 @@
+{
+  "manifest_metadata": {
+    "project": "Climate Risk, Value, and Investing — Exam Capstone",
+    "student_roll": "msd25006",
+    "academic_year": "2026",
+    "version": "V003",
+    "as_of_date": "2026-11-16",
+    "region_focus": "Southeast Asia",
+    "sector_pair": ["Utilities", "Consumer Staples"],
+    "num_holdings": 10,
+    "focal_asset": "Urban Data Centre (Singapore/KL Corridor)",
+    "focal_hazard": "Extreme Heat / Wet-Bulb Stress",
+    "focal_bond": "Corporate Sustainability-Linked Bond (SLB)"
+  },
+  "sources": [
+    {
+      "source_id": "SRC-EXAM-01",
+      "name": "Copernicus Climate Data Store — ERA5 Reanalysis & Thermal Heat Indices",
+      "url": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+      "retrieved_on": "2026-11-12",
+      "license": "Copernicus Open Access License",
+      "units": "Degrees Celsius, Cooling Degree Days (CDD), Wet-Bulb Globe Temperature (WBGT)",
+      "geography": "Southeast Asian Urban Corridors (Singapore, Kuala Lumpur, Bangkok, Manila, Jakarta)",
+      "coverage": "1991-2025 daily reanalysis + IPCC AR6 extreme heat projections to 2040",
+      "checksum_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "source_id": "SRC-EXAM-02",
+      "name": "NGFS Phase IV Climate Scenarios Database",
+      "url": "https://www.ngfs.net/ngfs-scenarios-portal/",
+      "retrieved_on": "2026-11-14",
+      "license": "NGFS Public Access License",
+      "units": "USD/tCO2 (Carbon price trajectories), Primary energy mix %, Regional GDP shock %",
+      "geography": "Asia-Pacific Regional Aggregates & Southeast Asia Models",
+      "coverage": "2025-2050 trajectories: Current Policies, Net Zero 2050, and Delayed Transition",
+      "checksum_sha256": "a6c8e31a980753fbe9871752b57519bfb4e54823eb55f44820a4b373024be514"
+    },
+    {
+      "source_id": "SRC-EXAM-03",
+      "name": "ASEAN Exchange Corporate Filings & Sustainability Reports",
+      "url": "https://www.sgx.com, https://www.bursamalaysia.com, https://www.set.or.th, https://www.pse.com.ph, https://www.idx.co.id",
+      "retrieved_on": "2026-11-15",
+      "license": "Public Regulatory Corporate Disclosures",
+      "units": "MUSD (Financial statements), ktCO2e (Scope 1, 2 & verified 3 emissions)",
+      "geography": "Southeast Asia (Singapore, Malaysia, Thailand, Philippines, Indonesia)",
+      "coverage": "10 listed entities (SEMB, TNB, MER, GULF, PGAS, CPALL, WILM, THBEV, URC, INDF) FY2023-FY2025",
+      "checksum_sha256": "9f83a216d2df26c8b93b4a2f8a44b9a1410d9f2e30bc7e58882b5420f1885b24"
+    },
+    {
+      "source_id": "SRC-EXAM-04",
+      "name": "Our World in Data & GHG Protocol Cross-Sectoral Emission Tools",
+      "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+      "retrieved_on": "2026-11-10",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "units": "MtCO2e, Country-specific Grid Emission Factors (tCO2/MWh)",
+      "geography": "ASEAN member states (SG, MY, TH, PH, ID)",
+      "coverage": "National grid emission factors and sector intensity averages 2000-2024",
+      "checksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-EXAM-05",
+      "name": "ICMA & ASEAN Capital Markets Forum (ACMF) Labelled Bond Standards",
+      "url": "https://www.icmagroup.org, https://www.theacmf.org",
+      "retrieved_on": "2026-11-11",
+      "license": "Public Regulatory Framework",
+      "units": "BPS (Coupon step-up penalties), KPIs, Second-Party Opinions",
+      "geography": "ASEAN Sustainability-Linked Bond Standards (ASEAN SLBS) & Green Bond Guidelines",
+      "coverage": "Framework benchmarks, MAS Sustainable Bond Grant Scheme provisions, KPI criteria",
+      "checksum_sha256": "c88f2195a4325a76e932b210e9a56209489f66bb6231268b82438fa9635905d1"
+    }
+  ]
+}

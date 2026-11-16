@@ -1,0 +1,36 @@
+field_name,data_type,units,source,data_status,notes_and_formula
+ticker,string,none,Market Exchange,Observed,Unique equity ticker identifier (SEMB, TNB, MER, GULF, PGAS, CPALL, WILM, THBEV, URC, INDF)
+company_name,string,none,Issuer Disclosures,Observed,Official registered corporate legal entity name
+country,string,none,Market Listing,Observed,Primary jurisdiction of operations and headquarters
+sector,string,none,GICS Classification,Observed,Assigned sector group: Utilities or Consumer Staples
+revenue_musd,float,Millions USD,Audited Financial Statements (FY24),Observed,Consolidated top-line annual operational revenue
+market_cap_musd,float,Millions USD,Market Pricing,Observed,Total market capitalization as of FY24 reporting
+benchmark_weight,float,proportion,Equal-Weight Portfolio,Observed,Baseline portfolio allocation (0.10 for each of the 10 holdings)
+scope1_emissions_kt,float,Kilotonnes CO2e,Sustainability Reports / CDP,Observed,Direct operational greenhouse gas emissions
+scope2_emissions_kt,float,Kilotonnes CO2e,Sustainability Reports / CDP,Observed,Indirect electricity and steam generation GHG emissions
+scope3_disclosed,boolean,boolean flag,Sustainability Reports,Observed,Whether corporate reporting includes upstream/downstream Scope 3 categories
+emis_intensity_tco2_per_musd,float,tCO2e / MUSD,Derived,Observed/Estimated,Formula: (scope1_emissions_kt + scope2_emissions_kt) * 1000 / revenue_musd
+physical_exposure_score,float,score [0-1],Constructed Physical Index,Estimated,Asset vulnerability to regional heatwaves, cooling outages, and water scarcity
+transition_exposure_score,float,score [0-1],Constructed Transition Index,Estimated,Sensitivity to escalating carbon taxation, coal retirement, and fuel-switching capex
+primary_channel,string,categorical,Derived Classification,Estimated,Formula: If transition_exposure_score >= physical_exposure_score then 'transition' else 'physical'
+transmission_mechanism,string,narrative text,Financial Analysis,Judgment,Explicit qualitative transmission pathway from climate shock to enterprise cash flow
+hazard_heat_index,float,index [0-1],Copernicus ERA5 / IPCC,Estimated,Regional climatological extreme heat hazard severity index for operating footprint
+score_A_disclosure,integer,rating [1-10],Constructed Governance Score,Estimated,Scoring of quantitative disclosure transparency, boundary rigor, and external assurance
+score_B_alignment,integer,rating [1-10],Constructed Alignment Score,Estimated,Scoring of 1.5C / Net Zero target alignment, coal decommissioning, and controversy penalty
+ratings_divergence,integer,absolute difference,Derived,Estimated,Formula: abs(score_A_disclosure - score_B_alignment)
+focal_asset_replacement_musd,float,Millions USD,Engineering Valuation,Estimated,Replacement cost of the Tier III Urban Data Centre ($85M)
+eal_no_action_musd,float,Millions USD,Monte Carlo Simulation,Simulated,Expected Annual Loss under baseline extreme heat without physical adaptation or insurance
+p95_tail_loss_musd,float,Millions USD,Monte Carlo Simulation,Simulated,95th percentile annual tail loss from 25,000 simulated heatwave iterations
+p99_tail_loss_musd,float,Millions USD,Monte Carlo Simulation,Simulated,99th percentile catastrophic annual tail loss from simulation
+eal_adaptation_musd,float,Millions USD,Physical Resilience Model,Simulated,Expected Annual Loss after liquid immersion cooling retrofit (45% damage reduction)
+eal_insurance_musd,float,Millions USD,Parametric Risk Transfer,Simulated,Retained loss after parametric insurance payout (attachment $3M, limit $20M)
+eal_combined_musd,float,Millions USD,Integrated Optimization,Simulated,Retained loss under combined physical adaptation plus parametric insurance hedge
+basis_risk_residual_musd,float,Millions USD,Derived,Simulated,Formula: eal_insurance_musd - theoretical_indemnity_recovery (measure of unhedged basis risk)
+slb_target_met_price,float,USD per 100 par,Bond Discounting Model,Simulated,Present value of Corporate SLB cash flows assuming 2028 GHG KPI is achieved
+slb_target_missed_price,float,USD per 100 par,Bond Discounting Model,Simulated,Present value of Corporate SLB cash flows assuming KPI missed (+25 bps coupon penalty)
+carbon_intensity_penalty,float,normalized [0-1],Derived,Estimated,Formula: emis_intensity_tco2_per_musd / max(emis_intensity_tco2_per_musd)
+physical_hazard_penalty,float,index [0-1],Derived,Estimated,Formula: hazard_heat_index * physical_exposure_score
+composite_climate_score,float,composite score,Multi-Factor Model,Judgment,Formula: 0.40*(score_A_disclosure/10) - 0.30*carbon_intensity_penalty - 0.30*physical_hazard_penalty
+active_weight_delta,float,percentage delta,Capital Allocation Rule,Judgment,Formula: If score >= 0.150 then +3.0% (Overweight); If score <= -0.050 then -3.0% (Underweight); else 0.0%
+final_portfolio_weight,float,percentage allocation,Portfolio Construction,Judgment,Formula: benchmark_weight + active_weight_delta (constrained to sum to 1.0)
+recommendation,string,categorical action,Decision Engine,Judgment,Final capital-allocation decision: Overweight, Underweight, or Neutral

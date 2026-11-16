@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Climate Risk, Value, and Investing — Exam Capstone Dashboard (msd25006)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 25px; background: #f8fafc; color: #1e293b; }
+        header { background: #0f172a; color: white; padding: 20px 30px; border-radius: 8px; margin-bottom: 25px; }
+        header h1 { margin: 0; font-size: 24px; }
+        header p { margin: 5px 0 0; color: #94a3b8; font-size: 14px; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+        .badge-ow { background: #dcfce7; color: #166534; }
+        .badge-uw { background: #fee2e2; color: #991b1b; }
+        .badge-nt { background: #f1f5f9; color: #475569; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .card h3 { margin-top: 0; font-size: 15px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card .value { font-size: 28px; font-weight: bold; color: #0f172a; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 13.5px; }
+        th { background: #f1f5f9; font-weight: 600; color: #334155; }
+        tr:hover { background: #f8fafc; }
+        .section-title { font-size: 18px; font-weight: bold; margin: 30px 0 15px; color: #0f172a; border-left: 4px solid #3b82f6; padding-left: 10px; }
+        .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .img-card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; }
+        .img-card img { max-width: 100%; height: auto; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Climate Risk, Value, and Investing — Capstone Dashboard</h1>
+        <p>Roll No: <strong>msd25006</strong> | Region: Southeast Asia | Sectors: Utilities & Consumer Staples | As-of: FY2026</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Portfolio Imputed WACI</h3>
+            <div class="value">284.1 <span style="font-size:14px; font-weight:normal; color:#64748b;">tCO2e / MUSD</span></div>
+            <p style="margin:0; font-size:12px; color:#10b981;">Coverage Ratio: 90% Verified</p>
+        </div>
+        <div class="card">
+            <h3>Focal Asset Heat Risk (EAL)</h3>
+            <div class="value">$1.06M <span style="font-size:14px; font-weight:normal; color:#64748b;">Combined</span></div>
+            <p style="margin:0; font-size:12px; color:#ef4444;">No-Action EAL: $3.82M (P95: $24.4M)</p>
+        </div>
+        <div class="card">
+            <h3>Corporate SLB Step-Up</h3>
+            <div class="value">+$1.08 <span style="font-size:14px; font-weight:normal; color:#64748b;">per $100 par</span></div>
+            <p style="margin:0; font-size:12px; color:#3b82f6;">+25 bps Coupon Penalty if KPI Missed</p>
+        </div>
+        <div class="card">
+            <h3>Primary Action</h3>
+            <div class="value" style="color:#16a34a;">Overweight SEMB</div>
+            <p style="margin:0; font-size:12px; color:#dc2626;">Underweight TNB (-3%) & MER (-3%)</p>
+        </div>
+    </div>
+
+    <div class="section-title">Final Capital Allocation & Climate Signal Rankings</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Company Name</th>
+                <th>Country</th>
+                <th>Sector</th>
+                <th>Composite Score</th>
+                <th>Benchmark Weight</th>
+                <th>Final Weight</th>
+                <th>Recommendation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>THBEV</strong></td>
+                <td>Thai Beverage PCL</td>
+                <td>Thailand</td>
+                <td>Consumer Staples</td>
+                <td>0.095</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>CPALL</strong></td>
+                <td>CP ALL PCL</td>
+                <td>Thailand</td>
+                <td>Consumer Staples</td>
+                <td>0.071</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>SEMB</strong></td>
+                <td>Sembcorp Industries Ltd</td>
+                <td>Singapore</td>
+                <td>Utilities</td>
+                <td>0.046</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>URC</strong></td>
+                <td>Universal Robina Corporation</td>
+                <td>Philippines</td>
+                <td>Consumer Staples</td>
+                <td>0.013</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>INDF</strong></td>
+                <td>PT Indofood CBP Sukses Makmur Tbk</td>
+                <td>Indonesia</td>
+                <td>Consumer Staples</td>
+                <td>-0.013</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>WILM</strong></td>
+                <td>Wilmar International Ltd</td>
+                <td>Singapore</td>
+                <td>Consumer Staples</td>
+                <td>-0.021</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>GULF</strong></td>
+                <td>Gulf Energy Development PCL</td>
+                <td>Thailand</td>
+                <td>Utilities</td>
+                <td>-0.039</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>MER</strong></td>
+                <td>Manila Electric Company (Meralco)</td>
+                <td>Philippines</td>
+                <td>Utilities</td>
+                <td>-0.042</td>
+                <td>10.0%</td>
+                <td><strong>10.8%</strong></td>
+                <td><span class="badge badge-nt">Neutral (Hold Benchmark)</span></td>
+            </tr>
+            <tr>
+                <td><strong>PGAS</strong></td>
+                <td>PT Perusahaan Gas Negara Tbk</td>
+                <td>Indonesia</td>
+                <td>Utilities</td>
+                <td>-0.138</td>
+                <td>10.0%</td>
+                <td><strong>7.0%</strong></td>
+                <td><span class="badge badge-uw">Underweight (-3.0%)</span></td>
+            </tr>
+            <tr>
+                <td><strong>TNB</strong></td>
+                <td>Tenaga Nasional Berhad</td>
+                <td>Malaysia</td>
+                <td>Utilities</td>
+                <td>-0.201</td>
+                <td>10.0%</td>
+                <td><strong>7.0%</strong></td>
+                <td><span class="badge badge-uw">Underweight (-3.0%)</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">Key Visual Analytics & Scenario Sensitivity</div>
+    <div class="img-grid">
+        <div class="img-card">
+            <h4>Carbon Price DCF Sensitivity (SEMB)</h4>
+            <img src="../figures/fig1_carbon_dcf_sensitivity.png" alt="Carbon Price DCF Sensitivity">
+        </div>
+        <div class="img-card">
+            <h4>Heatwave Loss Exceedance Curve (Data Centre)</h4>
+            <img src="../figures/fig2_heatwave_loss_exceedance.png" alt="Heatwave Loss Exceedance Curve">
+        </div>
+    </div>
+</body>
+</html>
