@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Student starter pack reference folder (not part of submission)
+climate-finance-capstone-student-pack/
+
+# Environment / OS files
+.DS_Store
+Thumbs.db
+.env
+venv/
+.venv/

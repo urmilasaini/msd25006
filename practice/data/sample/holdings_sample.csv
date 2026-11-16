@@ -1,0 +1,5 @@
+ticker,company_name,sector,region,revenue_musd,weight,emis_intensity_tco2_per_musd
+SEMB,"Sembcorp Industries (Utilities, SG)",Utilities,Southeast Asia,5800.0,0.25,480.0
+TNB,"Tenaga Nasional Berhad (Utilities, MY)",Utilities,Southeast Asia,11400.0,0.25,620.0
+CPALL,"CP ALL PCL (Consumer Staples, TH)",Consumer,Southeast Asia,24500.0,0.25,95.0
+WILM,"Wilmar International (Consumer Staples, SG/SEA)",Consumer,Southeast Asia,67200.0,0.25,310.0

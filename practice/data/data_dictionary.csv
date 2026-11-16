@@ -1,0 +1,27 @@
+field_name,data_type,units,source,data_status,notes_and_formula
+ticker,string,none,Market Identifier,Observed,Company ticker code (SEMB, TNB, CPALL, WILM)
+company_name,string,none,Issuer Filings,Observed,Full corporate entity name and primary listing
+sector,string,none,GICS Classification,Observed,Assigned sector pair (Utilities or Consumer Staples)
+region,string,none,Handout Universe,Observed,Geographic operational region (Southeast Asia)
+revenue_musd,float,Millions USD,Annual Reports (FY24),Observed,Consolidated annual top-line revenue
+weight,float,proportion,Benchmark Portfolio,Observed,Equal-weighted benchmark portfolio share (0.25 each)
+emis_intensity_tco2_per_musd,float,tCO2e / MUSD,Sustainability Filings / CDP,Observed/Estimated,Scope 1 and Scope 2 GHG emissions intensity per unit revenue
+physical_exposure,float,index [0-1],Constructed,Estimated,Vulnerability score to acute extreme heat & tropical storm damage
+transition_exposure,float,index [0-1],Constructed,Estimated,Exposure to carbon pricing and regulatory coal phase-out policies
+primary_channel,string,categorical,Derived,Estimated,Formula: If transition_exposure >= physical_exposure then 'transition' else 'physical'
+transmission_note,string,text,Analytical Synthesis,Judgment,One-line qualitative explanation of financial transmission mechanism
+hazard_index,float,index [0-1],Copernicus ERA5 / WB,Estimated,Regional heat hazard severity index for asset locations
+score_A,integer,rating [1-10],Constructed ESG Score,Estimated,Transparent scoring based on quantitative disclosure completeness
+score_B,integer,rating [1-10],Constructed ESG Score,Estimated,Scoring incorporating transition controversy & fossil lock-in penalty
+divergence,integer,absolute difference,Derived,Estimated,Formula: abs(score_A - score_B) (measure of rating divergence)
+asset_value_musd,float,Millions USD,Engineering Valuation,Estimated,Replacement capital value of focal Urban Data Centre ($50M)
+eal,float,Millions USD,Monte Carlo Simulation,Simulated,Expected Annual Loss: Mean of annual simulated direct physical damage
+p95_loss,float,Millions USD,Monte Carlo Simulation,Simulated,95th percentile annual tail loss from exceedance distribution
+retained_insurance_loss,float,Millions USD,Derived,Simulated,Formula: loss - clip(loss - attach_deductible, 0, policy_limit)
+basis_risk_indicator,float,Millions USD,Derived,Simulated,Residual unhedged loss variance after parametric insurance payout
+slb_target_met_price,float,USD per 100 par,Bond Discounting Model,Simulated,Present value of SLB cash flows assuming 2027 GHG KPI is achieved
+slb_target_missed_price,float,USD per 100 par,Bond Discounting Model,Simulated,Present value of SLB cash flows assuming KPI fails, triggering +25 bps coupon step-up
+carbon_penalty,float,normalized index [0-1],Derived,Estimated,Formula: emis_intensity / max(emis_intensity)
+physical_risk_composite,float,index [0-1],Derived,Estimated,Formula: hazard_index * physical_exposure
+composite_score,float,score,Derived,Judgment,Formula: 0.40*esg_score - 0.30*carbon_penalty - 0.30*physical_risk_composite
+recommendation,string,categorical,Derived Decision,Judgment,Threshold: >= 0.15 Overweight (+5%), <= -0.05 Underweight (-5%), else Neutral

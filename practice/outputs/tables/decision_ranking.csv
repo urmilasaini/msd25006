@@ -1,0 +1,5 @@
+ticker,company_name,sector,score,recommendation
+CPALL,"CP ALL PCL (Consumer Staples, TH)",Consumer,0.051,Neutral (Equal Weight)
+SEMB,"Sembcorp Industries (Utilities, SG)",Utilities,-0.032,Neutral (Equal Weight)
+WILM,"Wilmar International (Consumer Staples, SG/SEA)",Consumer,-0.061,Underweight (-5%)
+TNB,"Tenaga Nasional Berhad (Utilities, MY)",Utilities,-0.067,Underweight (-5%)

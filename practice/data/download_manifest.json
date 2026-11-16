@@ -1,0 +1,55 @@
+{
+  "manifest_metadata": {
+    "project": "Climate Risk, Value, and Investing — Practice Capstone",
+    "student_roll": "msd25006",
+    "as_of_date": "2026-11-16",
+    "region": "Southeast Asia",
+    "sectors": ["Utilities", "Consumer Staples"]
+  },
+  "sources": [
+    {
+      "source_id": "SRC-01",
+      "name": "Our World in Data — CO2 and Greenhouse Gas Emissions",
+      "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+      "retrieved_on": "2026-11-10",
+      "license": "CC-BY 4.0",
+      "units": "MtCO2e, tCO2 per capita",
+      "geography": "Southeast Asia (Singapore, Malaysia, Thailand, Indonesia)",
+      "coverage": "National level emissions and sector intensity baselines",
+      "checksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-02",
+      "name": "Copernicus Climate Data Store — ERA5 Reanalysis & Thermal Indices",
+      "url": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+      "retrieved_on": "2026-11-12",
+      "license": "Copernicus Open Access License",
+      "units": "Degree Celsius, Cooling Degree Days (CDD), Wet-Bulb Globe Temperature",
+      "geography": "Southeast Asian Urban Corridors (Singapore, Kuala Lumpur, Bangkok, Jakarta)",
+      "coverage": "1991-2025 historical heat events and extreme temperature spikes",
+      "checksum_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "source_id": "SRC-03",
+      "name": "Corporate Sustainability Reports & Annual Filings (SGX / Bursa Malaysia / SET)",
+      "url": "https://www.sgx.com, https://www.bursamalaysia.com",
+      "retrieved_on": "2026-11-14",
+      "license": "Public Regulatory Disclosures",
+      "units": "MUSD (Financials), ktCO2e (Emissions Scope 1 & 2)",
+      "geography": "Southeast Asia listed entities (Sembcorp, TNB, CP ALL, Wilmar)",
+      "coverage": "FY2023-FY2025 audited financial statements, sustainability reports, and SLB framework",
+      "checksum_sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+    },
+    {
+      "source_id": "SRC-04",
+      "name": "NGFS Phase IV Climate Scenarios Portal",
+      "url": "https://www.ngfs.net/ngfs-scenarios-portal/",
+      "retrieved_on": "2026-11-15",
+      "license": "NGFS Public Terms of Use",
+      "units": "USD/tCO2 (Carbon price trajectories), GDP impact %",
+      "geography": "Regional Asia-Pacific / Southeast Asia",
+      "coverage": "Net Zero 2050, Delayed Transition, and Current Policies pathways (2024-2050)",
+      "checksum_sha256": "a6c8e31a980753fbe9871752b57519bfb4e54823eb55f44820a4b373024be514"
+    }
+  ]
+}
